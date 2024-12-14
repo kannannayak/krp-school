@@ -35,49 +35,44 @@ export const AboutKRP = () => {
     <div className="ourcoursedetail1">
       <div className="container">
         <div className="brushstroke-container fade-in">
-          <span className="brushstroke-text">About KRP School</span>
+          <span className="brushstroke-text">Dear KRP family members,</span>
         </div>
         <div
-          className="coursecontent1"
           style={{
+            marginLeft: "-30px",
             display: "flex",
             flexDirection: "row",
-            gap: "5rem",
             alignItems: "center",
-            justifyContent: "space-between",
-            width: "90%",
+            justifyContent: "space-around",
           }}
         >
-          <div className="coursecnt">
+          <Card hoverable style={{ width: "30%", padding: 0 }}>
             <p
               className="fade-in mt-2"
               style={{
-                width: "50%",
-                fontSize: "16px",
-                lineHeight: "1.6",
+                fontSize: "18px",
+                lineHeight: "1.8", // Increased line height for better spacing
                 color: "#333",
                 textAlign: "justify",
-                margin: "10px 0",
                 padding: "10px",
                 backgroundColor: "#f9f9f9",
-                borderLeft: "4px solid #4CAF50",
                 borderRadius: "8px",
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                 animation: "fadeIn 1.5s ease-in-out",
-                lineHeight: "1.6",
               }}
             >
-              KRP Matriculation Higher Secondary School is located in Alathur,
-              Salem, Tamil Nadu, at Bhavani Main Road, Pachampalayam,
-              Komarapalayam Taluk, Padaiveedu, Tamil Nadu 637303. It is
-              well-regarded in the area, ranked first among 29 schools in
-              Alathur and achieving an overall rating of 3.9 out of 5 based on
-              38 reviews. The school provides education up to higher secondary
-              level and has a reputation for being among the popular choices in
-              the region.
+              KRP Matriculation Higher Secondary School, located in Alathur,
+              Salem, Tamil Nadu, is highly regarded, ranked first among 29
+              schools in the area, with a 3.9/5 rating based on 38 reviews. It
+              offers education up to the higher secondary level.
             </p>
-          </div>
-
+          </Card>
+          <Card
+            hoverable
+            cover={<img alt="example" src={avarat} width={150} height={250} />}
+          >
+            <Meta title="Correspondent" description="Mr. K. Kalayanasundaram" />
+          </Card>
           <Card
             hoverable
             cover={<img alt="example" src={avarat} width={150} height={250} />}

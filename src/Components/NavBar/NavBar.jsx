@@ -65,7 +65,7 @@ const NavBar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Record
+                Announcements
               </a>
               <ul
                 className="dropdown-menu ulcolor"
@@ -78,7 +78,17 @@ const NavBar = () => {
                     )}`}
                     to="/Tutorials"
                   >
-                    Sports
+                    Sports Awards
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`dropdown-item ancher unlist ${isDropdownActive(
+                      "/Tutorials"
+                    )}`}
+                    to="/Tutorials"
+                  >
+                    Student Awards
                   </Link>
                 </li>
                 <li>
@@ -98,16 +108,12 @@ const NavBar = () => {
                 "/Tournament"
               )}`}
             >
-              <a
-                className="nav-link dropdown-toggle ancher"
-                href="#"
-                id="navbarDropdown2"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Achievements
-              </a>
+              <li className="nav-item">
+                <a className="nav-link ancher" href="/Records">
+                  Academic Records
+                </a>
+              </li>
+
               <ul
                 className="dropdown-menu ulcolor"
                 aria-labelledby="navbarDropdown2"
@@ -160,7 +166,7 @@ const NavBar = () => {
                     )}`}
                     to="/Videos"
                   >
-                    Testimonial Videos
+                    Festival Videos
                   </Link>
                 </li>
                 <li>
@@ -170,13 +176,23 @@ const NavBar = () => {
                     )}`}
                     to="/Gallery"
                   >
-                    Images
+                    Festival Images
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={`dropdown-item ancher unlist ${isDropdownActive(
+                      "/Gallery"
+                    )}`}
+                    to="/Gallery"
+                  >
+                    Student Group Photos
                   </Link>
                 </li>
               </ul>
             </li>
 
-            <li className={`nav-item dropdown unlist ${isDropdownActive("/")}`}>
+            {/* <li className={`nav-item dropdown unlist ${isDropdownActive("/")}`}>
               <a
                 className="nav-link dropdown-toggle ancher"
                 href="#"
@@ -223,7 +239,7 @@ const NavBar = () => {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link ancher" href="/carriers">
                 Carriers

@@ -10,6 +10,8 @@ import Ourvalidcustomers from "../Ourvalidcustomers/Ourvalidcustomers";
 import Achivers from "../Achivers/Achivers";
 import Copyrights from "../Copyrights/Copyrights";
 import { Carousel } from "antd";
+import CeoMessage from "../CEOMessage/CEOMessage";
+import Faculties from "../Faculties/Faculties";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -101,14 +103,16 @@ const Home = () => {
       </div>
       <br />
       <AboutKRP />
-      <br />
-      {/* <Whystacking /> */}
-      <br />
-      <Ourcourse />
-      {/* <Achivers /> <br /> */}
-      {/* <AboutUs /> */}
+      {/* <CeoMessage /> */}
       {/* <br /> */}
+      {/* <Whystacking /> */}
+      {/* <br /> */}
+      <Achivers /> <br />
+      <Ourcourse />
       {/* <Ourvalidcustomers /> <br /> */}
+      <Faculties /> <br />
+      <AboutUs />
+      <br />
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#6AA845"

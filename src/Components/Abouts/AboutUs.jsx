@@ -5,34 +5,37 @@ const AboutUs = () => {
   const [stats, setStats] = useState({
     Students: "",
     Awards: "",
-    Trainers: ""
+    Trainers: "",
   });
 
   const [targets, setTargets] = useState({
     Students: "",
     Awards: "",
-    Trainers: ""
+    Trainers: "",
   });
 
   const [hasAnimated, setHasAnimated] = useState({
     Students: false,
     Awards: false,
-    Trainers: false
+    Trainers: false,
   });
 
   // Fetch data from API
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch("https://themithraa.com//RestApi/WebApi/about_us_content.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            api_key: "Mithra@2024"
-          })
-        });
+        const response = await fetch(
+          "https://themithraa.com//RestApi/WebApi/about_us_content.php",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              api_key: "Mithra@2024",
+            }),
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
@@ -43,7 +46,7 @@ const AboutUs = () => {
             setTargets({
               Students,
               Awards,
-              Trainers: trainers
+              Trainers: trainers,
             });
 
             // Trigger animations immediately after setting targets
@@ -77,9 +80,9 @@ const AboutUs = () => {
       const elapsedTime = performance.now() - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
       const count = Math.floor(progress * number);
-      setStats(prevStats => ({
+      setStats((prevStats) => ({
         ...prevStats,
-        [key]: count + target.replace(/\d+/, '') // Append the remaining string (e.g., "+ Students")
+        [key]: count + target.replace(/\d+/, ""), // Append the remaining string (e.g., "+ Students")
       }));
       if (progress < 1) {
         requestAnimationFrame(updateCount);
@@ -92,7 +95,7 @@ const AboutUs = () => {
   // Scroll Animation and Triggering Count-Up
   useEffect(() => {
     const handleScroll = () => {
-      const reveals = document.querySelectorAll('.fade-in');
+      const reveals = document.querySelectorAll(".fade-in");
 
       reveals.forEach((reveal, index) => {
         const windowHeight = window.innerHeight;
@@ -100,46 +103,70 @@ const AboutUs = () => {
         const elementVisible = 100;
 
         if (elementTop < windowHeight - elementVisible) {
-          reveal.classList.add('active');
-          
+          reveal.classList.add("active");
+
           // Trigger the animation if it hasn't been animated yet
           const key = Object.keys(targets)[index];
           if (!hasAnimated[key] && targets[key]) {
-            setHasAnimated(prev => ({
+            setHasAnimated((prev) => ({
               ...prev,
-              [key]: true
+              [key]: true,
             }));
           }
         } else {
-          reveal.classList.remove('active');
+          reveal.classList.remove("active");
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [targets, hasAnimated]);
 
   return (
-    <div className='about-us'>
-      <div className='container'>
+    <div className="about-us">
+      <div className="container">
         <div className="about-us-title brushstroke-container fade-in">
           <span className="brushstroke-text">About us</span>
         </div>
 
         <div className="about-us-content d-flex">
           <div className="text-content fade-in">
-            <p>Mithraa Sports Private Limited is India's premier manufacturer of sports stacking products. Since 2016, we have been pioneers in the industry, dedicated to providing top-quality equipment that meets the needs of both novice and professional stackers.</p>
-            <p>Our flagship product, the Mithraa Sports Stacking application, is designed to support stackers in enhancing their performance. Whether you're just starting or aiming to break records, our app offers the tools and guidance needed to excel in the sport.</p>
-            <p>We are proud to be the official licensed sports stacking product provider for ISDA (International Students Development Association) events, a testament to our commitment to quality and innovation. At Mithraa Sports, we strive to empower athletes of all ages to achieve their best through our cutting-edge products and technology.</p>
+            <p>
+              {" "}
+              KRP Matriculation Higher Secondary School, located in Alathur,
+              Tamil Nadu, stands as a leading educational institution dedicated
+              to fostering academic excellence and holistic development.
+              Established with a mission to empower young minds, the school has
+              earned a reputation for its innovative teaching methods and
+              student-centric approach.{" "}
+            </p>{" "}
+            <p>
+              {" "}
+              The school offers a robust curriculum up to the higher secondary
+              level, designed to cater to the needs of students aiming for both
+              academic and extracurricular excellence. Through well-equipped
+              facilities and a team of dedicated educators, KRP ensures that
+              students receive a well-rounded education that prepares them for
+              future challenges.{" "}
+            </p>{" "}
+            <p>
+              {" "}
+              As one of the top-ranked schools in the region, KRP Matriculation
+              Higher Secondary School takes pride in nurturing talent and
+              promoting values such as discipline, teamwork, and resilience.
+              With a focus on continuous improvement, the school strives to
+              create an environment where students can thrive and achieve their
+              fullest potential.{" "}
+            </p>
           </div>
-
+          {/* 
           <div className="stats-container fade-in">
             <div className="stat-circle">{stats.Students}</div>
             <div className="stat-circle">{stats.Awards}</div>
             <div className="stat-circle">{stats.Trainers}</div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

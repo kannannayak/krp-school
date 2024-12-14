@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../Images/mithraa.png";
+import logo from "../Images/KRP-logo.png";
 import "../Footerdetail/Footerdetails.css";
 import address from "../Images/location-pin.png";
 
