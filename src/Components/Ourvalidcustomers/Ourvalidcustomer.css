@@ -1,0 +1,44 @@
+.Ourvalidcustomer {
+  background: #ffffff;
+}
+
+.brushstroke-container {
+  position: relative;
+  display: inline-block;
+  margin-left: -30px;
+}
+
+.brushstroke-text {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 15px;
+  z-index: 1;
+}
+
+.brushstroke-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: #6AA845;
+  z-index: 0;
+  padding: 5px 0;
+  border-radius: 10px;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+.slick-slide img {
+  max-width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.slick-dots {
+  bottom: -25px;
+}

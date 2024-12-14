@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    /* padding: 20px;
+    height: 70vh; */
+  }
+  
+  .franchise-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .franchise-text {
+    max-width: 50%;
+  }
+  
+  .franchise-text p {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .franchise-text ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .franchise-text li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .franchise-text li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: red;
+    font-size: 20px;
+  }
+  
+  .franchise-video {
+    width: 500px;
+    height: 500px;
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+
+  .regbutton {
+    width: 80%; /* Use a percentage to make it responsive */
+    max-width: 500px; /* Set a maximum width */
+    background-color: #6AA845;
+    padding: 0 50px; /* Adjust padding for better appearance */
+    height: 50px;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 10px;
+    margin: 5px auto; /* Center the button and add margin for spacing */
+    display: block; /* Ensure the button is block-level for centering */
+    text-align: center; /* Center the text inside the button */
+    margin-top: -150px !important;
+}
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .franchise-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .franchise-text, .franchise-video {
+      max-width: 100%;
+      padding-left: 0;
+    }
+  
+    .franchise-video iframe {
+      width: 100%;
+      height: auto;
+    }
+  }

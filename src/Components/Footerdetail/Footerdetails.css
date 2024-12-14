@@ -1,0 +1,217 @@
+.footerdetail {
+   display: flex;
+   flex-wrap: wrap;
+   background-color: #6AA845;
+   padding: 20px;
+   color: #fff;
+}
+
+.contact-section {
+   flex: 1;
+   min-width: 300px; /* Ensures sections don't get too narrow */
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.logo {
+   max-width: 200px;
+   /* margin-bottom: 20px; */
+   margin-left: -5px !important;
+}
+
+.contact-info p {
+   margin: 15px 0;
+}
+
+.form-section {
+   flex: 1;
+   min-width: 300px; /* Ensures sections don't get too narrow */
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.footerform {
+   background-color: white;
+   padding: 20px;
+   border-radius: 10px;
+   color: #000;
+}
+
+.footerform h2 {
+   text-align: center;
+   color: black;
+   margin-bottom: 20px;
+}
+
+.form-group {
+   margin-bottom: 15px;
+}
+
+.form-control {
+   width: 100%;
+   padding: 10px;
+   margin-top: 5px;
+   border: 1px solid black;
+   border-radius: 5px;
+   background-color: white;
+}
+
+.submit-btn {
+   width: 100%;
+   padding: 10px;
+   background-color: #6AA845;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.submit-btn:hover {
+   background-color: #5c9440;
+}
+
+.error-message {
+   color: red;
+   margin-top: 10px;
+}
+
+/* Icons */
+.wrapper {
+   display: inline-flex;
+   list-style: none;
+   height: 120px;
+   width: 100%;
+   /* padding-top: 40px; */
+   font-family: "Poppins", sans-serif;
+   justify-content: left;
+   margin-left: -20px;
+   margin-top: 25px;
+   
+ }
+ 
+ .wrapper .icon {
+   position: relative;
+   background: #000000;
+   border-radius: 50%;
+   margin-left: 10px;
+   width: 45px;
+   height: 45px;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ 
+ .wrapper .tooltip {
+   position: absolute;
+   top: 0;
+   font-size: 14px;
+   background: #fff;
+   color: #fff;
+   padding: 5px 8px;
+   border-radius: 5px;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   opacity: 0;
+   pointer-events: none;
+   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ 
+ .wrapper .tooltip::before {
+   position: absolute;
+   content: "";
+   height: 8px;
+   width: 8px;
+   background: #393434;
+   bottom: -3px;
+   left: 50%;
+   transform: translate(-50%) rotate(45deg);
+   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+ }
+ 
+ .wrapper .icon:hover .tooltip {
+   top: -45px;
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+ }
+ 
+ .wrapper .icon:hover span,
+ .wrapper .icon:hover .tooltip {
+   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .wrapper .email:hover,
+ .wrapper .email:hover .tooltip,
+ .wrapper .email:hover .tooltip::before {
+   background: #c12929;
+   color: #ffffff;
+ }
+ 
+ .wrapper .whatsapp:hover,
+ .wrapper .whatsapp:hover .tooltip,
+ .wrapper .whatsapp:hover .tooltip::before {
+   background: #20bd37;
+   color: #fff;
+ }
+ 
+ .wrapper .instagram:hover,
+ .wrapper .instagram:hover .tooltip,
+ .wrapper .instagram:hover .tooltip::before {
+   background: #eb52eb;
+   color: #fff;
+ }
+ 
+
+ 
+
+@media (max-width: 768px) {
+   .footerdetail {
+       flex-direction: column;
+       padding: 20px;
+   }
+
+   .contact-section, .form-section {
+       width: 100%;
+       padding: 10px;
+   }
+
+   .logo {
+       max-width: 150px;
+       margin: 0 auto 20px;
+   }
+
+   .footerform {
+       width: 100%;
+   }
+
+   .submit-btn {
+       margin-top: 20px;
+   }
+
+}
+
+@media (max-width: 480px) {
+   .contact-section, .form-section {
+       padding: 5px;
+   }
+
+   .footerform {
+       padding: 25px;
+   }
+
+   .form-control {
+       padding: 8px;
+   }
+
+   .submit-btn {
+       padding: 8px;
+   }
+}

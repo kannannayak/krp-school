@@ -1,0 +1,161 @@
+.tournament-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tournamentcard {
+  width: calc(32.333% - 20px); /* 1/3rd of the container minus the gap */
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  height: auto;
+  color: #000000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid black;
+}
+
+/* Hover effect */
+.tournamentcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tournamentcard span {
+  color: #6AA845;
+  font-weight: bolder;
+}
+
+.tourcard{
+  margin-top: 50px;
+    margin-left: 10px;
+    width: 330px;
+}
+
+.buttn{
+    background-color:#6AA845 !important ;
+    color: white !important;
+}
+
+:hover.buttn{
+    cursor: pointer;
+    box-shadow: 0 0 10px #6AA845,
+    0 0 20px #6AA845;
+}
+
+.tourcard div{
+   margin: 5px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   margin-left: 5px;
+   margin-left: 10px;
+   width:280px
+}
+
+.tourdescription{
+    margin-top: 10px;
+    width: auto;
+    text-align: justify;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    height: auto;
+}
+
+.tournamentpage{
+    height: auto;
+}
+
+.text{
+    padding-top: 50px;
+    color: rgb(104, 222, 0);
+    padding-bottom: 50px;
+}
+
+
+/*new css*/
+.tournamentpage {
+    padding: 20px;
+  }
+  
+  .tourheading {
+    text-align: center;
+  }
+  
+  .tournament-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* justify-content: center; */
+  }
+  
+  .tournamentcard {
+    /* flex: 1 1 calc(33.333% - 20px); */
+    box-sizing: border-box;
+    margin: 10px;
+  }
+  
+  .tourcard {
+    border: 1px solid #ccc;
+    /* padding: 15px; */
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .tourimg img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .btn.buttn {
+    margin-top: 10px;
+    background-color: #6AA845;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn.buttn:hover {
+    background-color: #5a9440;
+  }
+
+  
+  .summary{
+    color: #6AA845 ;
+  }
+
+ /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .tournamentcard {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .tournamentcard {
+    width: calc(100% - 10px); /* 1 card per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tournamentcard {
+    width: calc(100% - 10px); /* 1 card per row on very small screens */
+    margin-left: 5px;
+  }
+}
+
+.tourdescription {
+  margin-top: 10px;
+  text-align: justify;
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  height: auto;
+}
+
+.text {
+  padding-top: 30px;
+  color: rgb(104, 222, 0);
+  padding-bottom: 50px;
+}

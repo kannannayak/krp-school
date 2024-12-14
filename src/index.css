@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --buttonColor: #CDCD1A;
+  --linkColor: #FAFF07;
+  --textColorb: rgb(0, 0, 0);
+  --textColorw: rgb(255, 255, 255);
+  --backgroundColor: #ffffff;
+  --tableColumn1: #B3DAEC;
+  --tableColumn2: #CCE6F3;
+  --tabletitle: #2E3C6A;
+  --navColor: #C0C5D2;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}

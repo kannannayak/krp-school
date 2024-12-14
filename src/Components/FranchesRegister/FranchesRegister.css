@@ -1,0 +1,84 @@
+.franchesregister {
+    height: 86vh;
+    background-image: url('../Images/background4.jpg'); /* Adjust the path accordingly */
+    background-size: cover; /* Optional: to cover the entire div */
+    background-position: left; /* Optional: to center the image */
+  }
+
+  .franchesregister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.15); /* Glassy background */
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #6AA845;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .form-container input::placeholder,
+  .form-container select {
+    color: rgb(255, 255, 255);
+  }
+  
+  .form-container button {
+    background-color: #6AA845;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .form-container button:hover {
+    background-color: #6AA845;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .privacy-note {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  

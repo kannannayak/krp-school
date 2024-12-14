@@ -1,0 +1,163 @@
+.carousel-item {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carouselimg {
+  width: 100%;
+  height: 650px;
+}
+
+.content {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+}
+
+.homecontent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  margin-top: -40px;
+}
+
+/* .carousel {
+  margin-top: 70px;
+  width: 100%;
+ 
+} */
+
+.button {
+  margin-left: -5px;
+}
+
+.home {
+  padding: 150px 100px;
+  animation: slideRightToLeft 1s ease forwards;
+  opacity: 0;
+  transform: translateX(100%);
+  color: black;
+  width: 65%;
+  height: auto;
+}
+.d-block {
+  width: 100%;
+  height: 650px;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.span1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #6aa845;
+}
+
+.span2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #6aa845;
+}
+
+.btns {
+  background-color: #6aa845;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.btns:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #6aa845, 0 0 20px #6aa845;
+}
+
+@media (max-width: 768px) {
+  .carouselimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .homecontent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+  }
+
+  .home {
+    color: var(--textColor);
+    padding: 50px;
+    height: auto;
+    width: 100%;
+  }
+
+  .home-text {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slidebottomtotop 1s ease forwards;
+  }
+
+  @keyframes slidebottomtotop {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    25% {
+      opacity: 0;
+      transform: translateY(75%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    75% {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .btns:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #6aa845, 0 0 20px #6aa845;
+  }
+}
+
+.linkdata {
+  background-color: var(--buttonColor);
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    width: 100% !important;
+    margin-left: -15px !important;
+  }
+}

@@ -1,0 +1,78 @@
+.brushstroke-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px !important;
+  margin-left: -30px !important;
+}
+
+.brushstroke-text {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 15px;
+  z-index: 1;
+}
+
+.brushstroke-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: #6AA845;
+  z-index: 0;
+  padding: 5px 0;
+  border-radius: 10px;
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+
+.card-container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+.card2 {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card2 h2 {
+  margin-bottom: 20px;
+}
+
+.card2 iframe {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card2 p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-container2 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .card-container2 {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    padding: 10px; /* Reduce padding to fit smaller screens */
+  }
+
+  .card2 {
+    padding: 15px; /* Reduce padding inside cards for smaller screens */
+  }
+}

@@ -1,0 +1,114 @@
+
+.videobackground{
+  width: 100%;
+}
+
+.cardflex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+
+.card{
+    margin: 20px;
+    height: auto;
+    width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0.1px;
+   background-color:rgb(206, 199, 187) !important;
+}
+
+.loading{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: px;
+}
+
+.video_detail{
+  font-size: 16px;
+  line-height: 2;
+}
+
+.carddata{
+    margin-left: 5px;
+    color: rgb(0, 0, 0);
+}
+
+iframe{
+  width: 370px;
+  padding: 5px;
+  margin-left: 5px;
+  height: 250px;
+}
+
+.video_details {
+  overflow: hidden;
+
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.h4{
+  color: white;
+}
+
+.m-1{
+  color: aqua;
+}
+
+
+@media (max-width: 768px) {
+  .videobackground{
+    width: 100%;
+  }
+  
+
+  .card{
+    margin: 20px;
+    margin-left: 30px;
+    height: auto;
+    width: 350px; 
+    border: 0.1px;
+    background-color: #6AA845;
+
+}
+
+  iframe{
+    margin-left: 5px;
+    width: auto;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .card{
+    margin: 20px;
+    height: auto;
+    width: 350px; 
+    border: 0.1px;
+    background-color: #6AA845;
+
+}
+
+  iframe{
+    padding: 5px;
+    margin-left: 5px;
+    width: auto;
+    height: 220px;
+  }
+
+}
