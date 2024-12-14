@@ -4,6 +4,7 @@ import cupstack from "../Images/cupstack.jpg";
 import { Card } from "antd";
 
 import avarat from "../Images/avatar.png";
+import correspondentImage from "../Images/correspondent.png";
 export const AboutKRP = () => {
   // Scroll Animation
   // useEffect(() => {
@@ -69,7 +70,14 @@ export const AboutKRP = () => {
           </Card>
           <Card
             hoverable
-            cover={<img alt="example" src={avarat} width={150} height={250} />}
+            cover={
+              <img
+                alt="example"
+                src={correspondentImage}
+                width={150}
+                height={250}
+              />
+            }
           >
             <Meta title="Correspondent" description="Mr. K. Kalayanasundaram" />
           </Card>
