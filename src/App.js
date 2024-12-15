@@ -16,6 +16,7 @@ import BecomeFranches from "./Components/BecomeFranches/BecomeFranches";
 import FranchesRegister from "./Components/FranchesRegister/FranchesRegister";
 // import Image from "./Components/Image/image";
 import "../src/App.css";
+import Contact from "./Components/Contact/Contact";
 
 export default function App() {
   return (
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/Tournament" element={<Tournament />}></Route>
         <Route path="/carriers" element={<BecomeFranches />}></Route>
         <Route path="/FranchesRegister" element={<FranchesRegister />}></Route>
+        <Route path="/Contactus" element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
   );

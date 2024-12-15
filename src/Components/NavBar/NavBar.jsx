@@ -242,7 +242,12 @@ const NavBar = () => {
             </li> */}
             <li className="nav-item">
               <a className="nav-link ancher" href="/carriers">
-                Carriers
+                Carreers
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link ancher" href="/Contactus">
+                Contact
               </a>
             </li>
           </ul>

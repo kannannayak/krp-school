@@ -42,57 +42,83 @@ export const Records = () => {
   return (
     <div className="records-container container">
       <div className="brushstroke-container">
-        <span className="brushstroke-text">ISDA TOP RECORDS</span>
+        <span className="brushstroke-text">KRP TOP RECORDS</span>
       </div>
-      {records.map((group, index) => (
-        <div key={index} className="age-group-section">
-          <div className="age-group-header">{group.ageGroup}</div>
+        <div className="age-group-section">
+          <div className="age-group-header">12th</div>
           <div className="table-responsive">
             <table className="records-table table table-striped">
               <thead>
                 <tr>
-                  <th>Event</th>
+                  <th>S.no</th>
+                  <th>Name</th>
                   <th>Gender</th>
-                  <th>Time</th>
-                  <th>Athlete</th>
+                  <th>Mark</th>
                   <th>Year</th>
-                  <th>State</th>
                 </tr>
               </thead>
               <tbody>
-                {group.data.map((record, idx) => {
-                  // Calculate row span
-                  const rowSpan = group.data.filter(
-                    (r) => r.event === record.event
-                  ).length;
-                  const isFirstOccurrence =
-                    group.data.findIndex((r) => r.event === record.event) ===
-                    idx;
-
-                  return (
-                    <tr key={idx}>
-                      {isFirstOccurrence && (
-                        <td
-                          style={{ backgroundColor: "#f2f2f2" }}
-                          rowSpan={rowSpan}
-                          className="rowspan"
-                        >
-                          {record.event}
-                        </td>
-                      )}
-                      <td>{record.gender}</td>
-                      <td style={{ color: "blue" }}>{record.time}</td>
-                      <td style={{ color: "blue" }}>{record.athlete}</td>
-                      <td>{record.year}</td>
-                      <td>{record.country}</td>
-                    </tr>
-                  );
-                })}
+               <tr>
+                <td>1</td>
+                <td>Kannan</td>
+                <td>Male</td>
+                <td>597</td>
+                <td>2023</td>
+               </tr>
               </tbody>
             </table>
           </div>
         </div>
-      ))}
+        <div className="age-group-section">
+          <div className="age-group-header">11th</div>
+          <div className="table-responsive">
+            <table className="records-table table table-striped">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Mark</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td>1</td>
+                <td>Kannan</td>
+                <td>Male</td>
+                <td>597</td>
+                <td>2023</td>
+               </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="age-group-section">
+          <div className="age-group-header">10th</div>
+          <div className="table-responsive">
+            <table className="records-table table table-striped">
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Mark</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td>1</td>
+                <td>Kannan</td>
+                <td>Male</td>
+                <td>497</td>
+                <td>2023</td>
+               </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
     </div>
   );
 };

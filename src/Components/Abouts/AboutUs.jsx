@@ -1,5 +1,6 @@
 import "./AboutUs.css";
 import { useEffect, useState } from "react";
+import school from '../../assets/image/school.jpg';
 
 const AboutUs = () => {
   const [stats, setStats] = useState({
@@ -130,43 +131,25 @@ const AboutUs = () => {
         <div className="about-us-title brushstroke-container fade-in">
           <span className="brushstroke-text">About us</span>
         </div>
-
         <div className="about-us-content d-flex">
-          <div className="text-content fade-in">
-            <p>
-              {" "}
-              KRP Matriculation Higher Secondary School, located in Alathur,
-              Tamil Nadu, stands as a leading educational institution dedicated
-              to fostering academic excellence and holistic development.
-              Established with a mission to empower young minds, the school has
-              earned a reputation for its innovative teaching methods and
-              student-centric approach.{" "}
-            </p>{" "}
-            <p>
-              {" "}
-              The school offers a robust curriculum up to the higher secondary
-              level, designed to cater to the needs of students aiming for both
-              academic and extracurricular excellence. Through well-equipped
-              facilities and a team of dedicated educators, KRP ensures that
-              students receive a well-rounded education that prepares them for
-              future challenges.{" "}
-            </p>{" "}
-            <p>
-              {" "}
-              As one of the top-ranked schools in the region, KRP Matriculation
-              Higher Secondary School takes pride in nurturing talent and
-              promoting values such as discipline, teamwork, and resilience.
-              With a focus on continuous improvement, the school strives to
-              create an environment where students can thrive and achieve their
-              fullest potential.{" "}
-            </p>
+          <div className="row">
+            <div className="col-lg-6 d-flex">
+              <img src={school} alt="" className="about_round_image" />
+              <span className="round1 ">
+                <p className="round2 text-center"><span className="abtyears">11</span> <br /><br />Year of <br /> Experience</p>
+              </span>
+            </div>
+            <div className="col-lg-6 mt-5">
+              <h3 className="fw-bold">Welcome to <br />KRP Matriculation School</h3>
+              <div className="abt_content">
+                <p>To provide dynamic academic environment and bring out the creativity and innate potentialities of all children through multifarious activities.</p>
+                <div className="abt2">
+                  <input type="checkbox" name="" id="" checked/> To transform the children into excellent performer for national development.<br/><br/>
+                  <input type="checkbox" name="" id="" checked/> To transform the children into excellent performer for national development.
+                </div>
+              </div>
+            </div>
           </div>
-          {/* 
-          <div className="stats-container fade-in">
-            <div className="stat-circle">{stats.Students}</div>
-            <div className="stat-circle">{stats.Awards}</div>
-            <div className="stat-circle">{stats.Trainers}</div>
-          </div> */}
         </div>
       </div>
     </div>
